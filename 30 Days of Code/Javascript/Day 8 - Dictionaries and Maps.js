@@ -18,13 +18,13 @@ function processData(input) {
   var queries = tempArray.splice(entriesLength); //dump the queries into their own array
 
   for (var i = 0; i < entriesLength; i++) {
-    tempArray[i] = tempArray[i].split(" ");//split the names from the phones to prepare for mapping
+    tempArray[i] = tempArray[i].split(" "); //split the names from the phones to prepare for mapping
   }
   
-  var phoneBookMap = new Map(tempArray);//turn the array into a map
+  var phoneBookMap = new Map(tempArray); //turn the array into a map
   
   for (var i = 0; i < queries.length; i++) {
-    if (phoneBookMap.has(queries[i])) {//check if the qeury (name) exists in the phone book 
+    if (phoneBookMap.has(queries[i])) { //check if the query (name) exists in the phone book 
       console.log(queries[i] + "=" + phoneBookMap.get(queries[i]));
     } else {
       console.log("Not found");
